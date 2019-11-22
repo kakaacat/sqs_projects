@@ -1,5 +1,8 @@
 package sqs_javaPractice_visibleSort;
-
+/**
+ * 用来排序的数组
+ * the arrary ready to sort
+ * */
 public class ArrayNeedToSort {
 	int[] array;
 	

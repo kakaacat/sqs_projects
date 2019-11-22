@@ -6,7 +6,10 @@ import java.awt.Graphics;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
+/**
+ * 界面和数组的可视化
+ * to make sort visually
+ * */
 public class VisibleSort extends JPanel{
 	JFrame jFrame;
 	ArrayNeedToSort array;

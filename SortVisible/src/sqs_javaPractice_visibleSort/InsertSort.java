@@ -1,7 +1,6 @@
 package sqs_javaPractice_visibleSort;
-
 /**
- * 插入排序----直接插入排序
+ * 插入排序----直接插入排序(insert sort---InsertSort)
  * */
 public class InsertSort extends VisibleSort implements Sort,Runnable{	
 	
@@ -38,7 +37,12 @@ public class InsertSort extends VisibleSort implements Sort,Runnable{
 				} catch (Exception e) {}
 				super.repaint();				
 			}
-			array.set(temp, j+1);			
+			array.set(temp, j+1);	
 		}
+		//排序完成停2s退出
+		try {
+			Thread.sleep(2000); 
+		} catch (Exception e) {}
+		super.jFrame.setVisible(false);
 	}
 }
