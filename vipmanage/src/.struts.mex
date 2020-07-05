@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="action" location="337,11" size="183,1153">
+    <action name="login" location="22,34" size="151,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="main.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="login.jsp" />
+      </result>
+    </action>
+    <action name="vipAdd" location="22,120" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="inputInfo" location="16,213" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="queryInfo" location="17,290" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="vipselect_success.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="storeAdd" location="17,373" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="1" target="success.jsp">
+          <bendpoint location="150,419" dim1="-278,1" dim2="39,218" />
+        </resourceEdge>
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="storeQuery" location="17,468" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="findsuccess.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="logManage" location="15,551" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="logmanage.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="logDeleted" location="12,628" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="vipDeleted" location="16,702" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="allVip" location="15,778" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="allvip.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="allStores" location="11,853" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="allstores.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="storeDeleted" location="17,925" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="margeVip" location="15,998" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="margevip.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="modifyVip" location="13,1081" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="success.jsp" path="/success.jsp" location="26,154" size="150,55" />
+  <webResource name="main.jsp" path="/JSP/home/main.jsp" location="25,47" size="150,55" />
+  <webResource name="index.jsp" path="/index.jsp" location="678,18" size="150,55" />
+  <webResource name="error.jsp" path="/error.jsp" location="688,115" size="150,55" />
+  <webResource name="vipselect_success.jsp" path="/JSP/vipmanage/vipselect_success.jsp" location="30,310" size="150,55" />
+  <webResource name="findsuccess.jsp" path="/JSP/storemanage/findsuccess.jsp" location="46,482" size="150,55" />
+  <webResource name="logmanage.jsp" path="/JSP/logmanage/logmanage.jsp" location="41,569" size="150,55" />
+  <webResource name="allvip.jsp" path="/JSP/vipmanage/allvip.jsp" location="40,796" size="150,55" />
+  <webResource name="allstores.jsp" path="/JSP/storemanage/allstores.jsp" location="44,884" size="150,55" />
+  <webResource name="margevip.jsp" path="/JSP/vipmanage/margevip.jsp" location="43,1012" size="150,55" />
+  <webResource name="login.jsp" path="/login.jsp" location="50,650" size="150,55" />
+</Struts2Diagram>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="vipmanage"
+  id="myeclipse.1593572406683"
+  context-root="/vipmanage"
+  j2ee-spec="5.0"
+  archive="vipmanage.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

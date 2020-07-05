@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+.menu_list {
+width: 220px;
+margin: 0;
+}
+ 
+.menu_head {
+height: 47px;
+line-height: 47px;
+padding-left: 20px;
+font-size: 20px;
+color: #525252;
+cursor: pointer;
+border: 1px solid #f1f1f1;
+position: relative;
+margin: 0px;
+font-weight: bold;
+background: #51a9f18c;
+}
+ 
+.menu_list .current {
+background: #51a9f18c;
+}
+ 
+.menu_nva {
+line-height: 38px;
+border-left: 1px solid #51a9f18c;
+backguound: #fff;
+border-right: 1px solid #51a9f18c;
+}
+ 
+.menu_nva a {
+display: block;
+height: 38px;
+line-height: 38px;
+padding-left: 38px;
+color: #777777;
+background: #fff;
+text-decoration: none;
+border-bottom: 1px solid #51a9f18c;
+}
+

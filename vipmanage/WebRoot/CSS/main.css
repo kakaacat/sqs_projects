@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "宋体";
+	list-style-type: none;
+}
+
+#head {
+	height: 60px;
+	background-color: #ffff00;
+}
+
+#main_left{
+	width: 20%;
+	float: left;
+	position: fixed;
+}
+#main_right{
+	width: 80%;
+	float: right;
+}

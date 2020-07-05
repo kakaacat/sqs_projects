@@ -1,0 +1,103 @@
+@CHARSET "UTF-8";
+body { /*标签选择器*/
+    margin: 0;
+    padding: 0;
+    /*font-family 规定元素的字体系列。
+     sans-serif就是无衬线字体，是一种通用字体族。*/
+    font-family: sans-serif;
+    background: url("../images/bg1.jpg");
+    /*把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。*/
+    background-size: cover;
+}
+
+.box { /*类选择器*/
+    /*绝对定位的元素的位置相对于最近的已定位父元素，
+    如果元素没有已定位的父元素，那么它的位置相对于<html>:*/
+    position: absolute;
+    /*top: 50%;left: 50%;， 是以左上角为原点，故不处于中心位置
+    translate(-50%,-50%) 作用是，往上（x轴）,左（y轴）移动自身长宽的 50%
+    以使其居于中心位置*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 400px;
+    padding: 40px;
+    /*第四个值，alpha值，制定了色彩的透明度/不透明度，它的范围为0.0到1.0之间*/
+    background: rgba(0,0,0,.6);
+    box-sizing: border-box;
+    /*设置阴影：
+    box-shadow: 水平阴影的位置 垂直阴影的位置 模糊距离 阴影的颜色;*/
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    /*角度，就是盒子四个角的软润度*/
+    border-radius: 10px;
+}
+/*如果是.box,h2 则为组合选择器，意思是box类的元素 ！和！ h2元素*/
+/*选择box里 ！的！ h2元素。注意两者区别*/
+.box h2{/*要对box中的h2动手了*/
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    /*文本居中*/
+    text-align: center;
+}
+
+.box .inputBox{
+    /*生成相对定位的元素，相对于其正常位置进行定位*/
+    position: relative;
+}
+
+.box .inputBox input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    /*outline （轮廓）是绘制于元素周围的一条线
+    位于边框边缘的外围，可起到突出元素的作用*/
+    outline: none;
+    /*背景透明；transparent透明的意思*/
+    background: transparent;
+}
+
+.box .inputBox label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    /*让鼠标事件失效*/
+    pointer-events: none;
+    /*设置元素当过渡效果*/
+    transition: .5s;
+}
+
+/*:focus 选择器用于选取获得焦点的元素*/
+.box .inputBox input:focus ~ label,
+/*:valid 选择器在表单元素的值需要根据指定条件验证时设置指定样式。
+即输入值合法时才会修改样式*/
+.box .inputBox input:valid ~ label{
+    top: -18px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
+}
+.box input[type="submit"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #03a9f4;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.box input[type="submit"]:hover{
+    transform: scale(0.93);
+}

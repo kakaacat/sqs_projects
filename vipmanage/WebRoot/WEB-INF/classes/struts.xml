@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.enable.DynamicMethodInvocation" value="true" /> 
+	<package name="action" namespace="/" extends="struts-default">
+		<action name="login" class="action.home.Login">
+			<result name="success">/JSP/home/main.jsp</result>
+			<result name="error">/login.jsp</result></action>
+			
+		<action name="vipAdd" class="action.vip.VipAdd">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result></action>
+		<action name="inputInfo" class="action.vip.InputInfo">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="queryInfo" class="action.vip.QueryInfo">
+			<result name="success">
+				/JSP/vipmanage/vipselect_success.jsp
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="storeAdd" class="action.store.StoreAdd">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="storeQuery" class="action.store.StoreQuery">
+			<result name="success">
+				/JSP/storemanage/findsuccess.jsp
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="logManage" class="action.log.LogManage">
+			<result name="success">/JSP/logmanage/logmanage.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="logDeleted" class="action.log.LogDeleted">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result></action>
+		<action name="vipDeleted" class="action.vip.DeletedVip">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="allVip" class="action.vip.allVip">
+			<result name="success">/JSP/vipmanage/allvip.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="allStores" class="action.store.AllStores">
+			<result name="success">
+				/JSP/storemanage/allstores.jsp
+			</result>
+			<result name="error">/error.jsp</result></action>
+		<action name="storeDeleted" class="action.store.StoreDeleted">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="margeVip" class="action.vip.MargeVip">
+			<result name="success">/JSP/vipmanage/margevip.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="modifyVip" class="action.vip.ModifyVip">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action></package></struts>    

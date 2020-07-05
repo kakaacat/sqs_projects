@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+#vipselect_success{
+	margin: 100px 200px;
+	font-size: 26px;
+	color: #408080;
+}
+
+#vipselect_success h2{
+	position: absolute;
+}
+
+#vipselect_success table{
+	
+	position: relative;
+	left:60px;
+	top:40px;
+}
+
+#vipselect_success table th,#vipselect_success table td{
+	text-align: center;
+	padding: 12px;
+	font-size: 26px;
+}

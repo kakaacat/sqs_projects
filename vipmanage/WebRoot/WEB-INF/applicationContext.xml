@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url" value="jdbc:mysql://localhost:3306/vip_manage?characterEncoding=utf8"></property>
+		<property name="username" value="root"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>dao.admindao.Admin</value>
+				<value>dao.userdao.User</value>
+				<value>dao.storedao.Store</value>
+				<value>dao.logdao.Log</value>
+				</list>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>dao/admindao/Admin.hbm.xml</value>
+				<value>dao/userdao/User.hbm.xml</value>
+				<value>dao/logdao/Log.hbm.xml</value>
+				<value>dao/storedao/Store.hbm.xml</value></list>
+		</property></bean>
+	<bean id="AdminDAO" class="dao.admindao.AdminDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+		
+	<bean id="UserDAO" class="dao.userdao.UserDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="StoreDAO" class="dao.storedao.StoreDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="LogDAO" class="dao.logdao.LogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="action.home.Login" class="action.home.Login">
+		<property name="adminDAO">
+			<ref bean="AdminDAO" />
+		</property>
+	</bean>
+	<bean id="action.vip.VipAdd" class="action.vip.VipAdd">
+		<property name="userDAO">
+			<ref bean="UserDAO" />
+		</property>
+		<property name="logDAO">
+				<ref bean="LogDAO" />
+			</property>
+	</bean>
+	<bean id="action.vip.InputInfo" class="action.vip.InputInfo">
+		<property name="userDAO">
+			<ref bean="UserDAO" />
+		</property>
+		<property name="logDAO">
+				<ref bean="LogDAO" />
+			</property>
+	</bean>
+	<bean id="action.vip.QueryInfo" class="action.vip.QueryInfo">
+		<property name="userDAO">
+			<ref bean="UserDAO" />
+		</property>
+		<property name="logDAO">
+				<ref bean="LogDAO" />
+			</property>
+	</bean>
+	<bean id="action.store.StoreAdd" class="action.store.StoreAdd">
+		<property name="storeDAO">
+			<ref bean="StoreDAO" />
+		</property>
+		<property name="logDAO">
+				<ref bean="LogDAO" />
+			</property>
+	</bean>
+	<bean id="action.store.StoreQuery" class="action.store.StoreQuery">
+			<property name="storeDAO">
+				<ref bean="StoreDAO" />
+			</property>
+			<property name="logDAO">
+				<ref bean="LogDAO" />
+			</property>
+	</bean>
+	<bean id="action.log.LogManage" class="action.log.LogManage">
+			<property name="logDAO">
+				<ref bean="LogDAO" />
+			</property>
+	</bean>
+	<bean id="action.log.LogDeleted" class="action.log.LogDeleted">
+			<property name="logDAO">
+				<ref bean="LogDAO" />
+			</property>
+	</bean>
+	<bean id="action.vip.DeletedVip" class="action.vip.DeletedVip">
+			<property name="logDAO">
+				<ref bean="LogDAO" />
+			</property>
+			<property name="userDAO">
+			<ref bean="UserDAO" />
+		</property>
+	</bean>
+	<bean id="action.vip.allVip" class="action.vip.allVip">
+			<property name="userDAO">
+			<ref bean="UserDAO" />
+		</property>
+	</bean>
+	<bean id="action.store.AllStores" class="action.store.AllStores">
+			<property name="storeDAO">
+			<ref bean="StoreDAO" />
+		</property>
+	</bean>
+	<bean id="action.store.StoreDeleted" class="action.store.StoreDeleted">
+			<property name="storeDAO">
+			<ref bean="StoreDAO" />
+		</property>
+	</bean>
+	<bean id="action.vip.MargeVip" class="action.vip.MargeVip">
+			<property name="userDAO">
+			<ref bean="UserDAO" />
+		</property>
+	</bean>
+	<bean id="action.vip.ModifyVip" class="action.vip.ModifyVip">
+			<property name="userDAO">
+			<ref bean="UserDAO" />
+		</property>
+	</bean>
+	</beans>

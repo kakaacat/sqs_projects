@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "宋体";
+	text-decoration: none;
+	
+}
+
+#head_page{
+	height: 60px;
+	background-color: #3c3c3c;
+}
+
+#left{
+	width:50%;
+	float: left;
+	position: relative;
+	top:18px;
+	left:30px;
+	color: #c0c0c0;
+}
+#right{
+	width:50%;
+	float: right;
+	
+}
+#right ul{
+	margin:0px;
+	margin-top: 30px
+	padding: 0px;
+	float: right;
+	position: relative;
+	right:40px;
+	
+}
+
+#right ul li{
+	list-style:none;  
+	float: left;
+	margin:10px 18px;
+	position: relative;
+	top:28px;
+}
+
+#head_page a{
+	color: #c0c0c0;
+}
+
+#head_page a:HOVER{
+	color: #e9521f;
+}

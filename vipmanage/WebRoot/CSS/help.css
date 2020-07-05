@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+#help_content{
+	margin: 40px 80px;
+	top: 80px
+}
+#help_content h1{
+	margin-left: 360px;
+	margin-bottom: 10px;
+}
+#help_content p{
+	margin: 4px;
+	font-size: 20px;
+}

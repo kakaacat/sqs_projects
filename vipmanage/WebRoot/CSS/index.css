@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+
+body{
+	text-align: center;
+	font-family: "宋体";
+}
+
+form{
+	width: 431px;
+	margin: 0px auto;
+	position: relative;
+	top: 200px;
+}
+
+span{
+	font-size: 26px;
+}
+
+.input{
+	border: 1px solid #35A6FF; 
+	font-size: 26px;
+	font-weight: 4px;
+	margin: 6px;
+}
+
+#submit{
+	
+	width:80px;
+	padding:0px;
+	position:relative;
+	left:30px;
+	top:10px;
+	background-color: #3B9BFF;
+	color: white;
+	font-size: 26px;
+	font-family: "楷体";
+	font-weight: bolder;
+	
+}
+
